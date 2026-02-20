@@ -1,0 +1,13 @@
+getgenv().NinjaLegends = {
+	Autofarm = true,
+}
+
+function Autofarm()
+	task.spawn(function()
+		while getgenv().NinjaLegends.Autofarm == true do
+			task.wait()
+			local args = { [1] = "swingKatana" }
+			game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+		end
+	end)
+end
