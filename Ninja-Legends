@@ -11,3 +11,5 @@ function Autofarm()
 		end
 	end)
 end
+
+Autofarm()
